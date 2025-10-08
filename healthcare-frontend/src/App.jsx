@@ -2,7 +2,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import axios from 'axios';
 
 // --- REAL API SETUP ---
-const API_URL = 'https://dasweb-api-cxafebethbb7frdb.uaenorth-01.azurewebsites.net/';
+const API_URL = 'https://dasweb-api-cxafebethbb7frdb.uaenorth-01.azurewebsites.net/api';
 
 const api = {
   login: async (username, password) => {
