@@ -1,0 +1,26 @@
+# Ignore the massive node_modules folder
+node_modules
+
+# Ignore the local build output directory (it will be created inside the container)
+dist
+dist-ssr
+
+# Ignore npm debug logs
+npm-debug.log
+
+# Ignore all environment files
+.env
+.env.*
+
+# Ignore system and IDE files
+.DS_Store
+.vscode/
+.idea/
+
+# Ignore Git files
+.git
+.gitignore
+
+# Ignore Docker files
+Dockerfile
+.dockerignore
