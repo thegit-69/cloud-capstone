@@ -30,8 +30,7 @@ const pool = mysql.createPool({
 app.get('/', (req, res) => { res.send('Health Care System API is running!'); });
 
 // --- SECURED AUTHENTICATION ---
-
-// ** UPDATED: Secure Login Endpoint **
+// ** UPDATED: Cleaned Login Endpoint (No Debug Logs) **
 app.post('/api/login', async (req, res) => {
     const { username, password } = req.body;
     if (!username || !password) {
@@ -51,7 +50,7 @@ app.post('/api/login', async (req, res) => {
 
         if (passwordMatch) {
             // 3. Passwords match, login is successful
-            delete user.password; // Never send the hash back to the client
+            delete user.password;
             res.json({ success: true, user });
         } else {
             // 4. Passwords do not match
